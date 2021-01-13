@@ -115,7 +115,7 @@ def build_map_dict_by_name(gdpinfo, plot_countries, year):
     # 不要忘记返回结果
 
 
-def hahaha(plot_countries, gdp_countries, year):
+def hanshu(plot_countries, gdp_countries, year):
     list1=[];dic1={};dic2={}
     for i in plot_countries:
         dic1[plot_countries[i]] = i
@@ -132,8 +132,6 @@ def hahaha(plot_countries, gdp_countries, year):
         try:dic2[dic1[i]]=1
         except KeyError:pass
         else:pass
-    #print(dic2)
-
     return dic2
 
 
@@ -184,6 +182,6 @@ print("----------------------")
 year = input("请输入需查询的具体年份:")
 # test_render_world_map(year)
 reader=read_csv_as_nested_dict("isp_gdp.csv","Country Name",",","_")
-a=reconcile_countries_by_name(pygal_countries,reader)
-b=hahaha(pygal_countries,reader,year)
-render_world_map(build_map_dict_by_name(reader,pygal_countries,year),a,b,year,"isp_gdp_world_name_%s.svg"%(year))
+aerfa=reconcile_countries_by_name(pygal_countries,reader)
+beita=hanshu(pygal_countries,reader,year)
+render_world_map(build_map_dict_by_name(reader,pygal_countries,year),aerfa,beita,year,"isp_gdp_world_name_%s.svg"%(year))
