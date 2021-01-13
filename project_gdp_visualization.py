@@ -146,7 +146,7 @@ def render_world_map(have,empty_always,empty_at_this_time, year, map_file):  # �
     提示：本函数可视化需要利用pygal.maps.world.World()方法
     """
     worldmap_chart = pygal.maps.world.World()
-    worldmap_chart.title = 'Minimum deaths by capital punishement (source: Amnesty International)'
+    worldmap_chart.title = '世行GDP历史数据基本分类及其可视化'
     worldmap_chart.add(year,have)
     worldmap_chart.add("missing from world bank",empty_always)
     worldmap_chart.add("no date at this year",empty_at_this_time)
